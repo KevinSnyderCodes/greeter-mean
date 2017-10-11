@@ -1,0 +1,21 @@
+{
+  "name": "ping-mean",
+  "version": "1.0.0",
+  "description": "Some cool endpoints!",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "prestart": "mongod --dbpath data --port 27017 &",
+    "start": "node app.js",
+    "poststop": "mongo admin --eval 'db.shutdownServer()'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
